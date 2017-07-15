@@ -24,13 +24,21 @@ class App extends React.Component {
 //other way for represent the same code
 //const App = () => <h1>Hello stateless jaja</h1>
 
-
-
-
 class App extends React.Component {
     render(){
         let txt = this.props.txt
         return <h1>{txt}</h1>
     }
 }
+
+App.proptypes = {
+    txt: React.PropTypes.string,
+    cat: React.PropTypes.number.isRequired
+}
+
+
+App.defaultProps = {
+    txt: "This is the prop text JB"
+}
+
 export default App
